@@ -1,6 +1,5 @@
 services: 
     noddde:
-        container_name: noddde
         restart: always
         tty: true
         volumes:
@@ -10,28 +9,28 @@ services:
         build:
             context: ./../..
             dockerfile: ./docker/dev/Dockerfile
-        # depends_on: 
-            # - mysql
+        depends_on: 
+            - noddde-mysql
         # environment: 
         #     - DB_HOST=mysql
         #     - DB_USER=root
         #     - DB_DATABASE=test-docker
         #     - DB_PASSWORD=test-docker
 
-    # mysql:
-    #     image: mysql:8.0.34
-    #     container_name: test-docker-mysql
-    #     # command: --default-authentication-plugin=mysql_native_password --explicit_defaults_for_timestamp
-    #     restart: always
-    #     volumes: 
-    #         # - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
-    #         - mysql-storage:/var/lib/mysql
-    #     environment:
-    #         DB_DATABASE: test-docker
-    #         DB_PASSWORD: test-docker
-    #         MYSQL_ROOT_PASSWORD: root
-    #         MYSQL_ALLOW_EMPTY_PASSWORD: false
-    #         MYSQL_RANDOM_ROOT_PASSWORD: null
-# volumes:
-    # mysql-storage:
-    #     name: test-docker-mysql-storage
+    noddde-mysql:
+        image: mysql:8.0.34
+        restart: always
+        volumes: 
+            # - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+            - noddde-mysql-storage:/var/lib/mysql
+        ports:
+            - 3307:3306
+        # command: --default-authentication-plugin=mysql_native_password --explicit_defaults_for_timestamp
+        environment:
+            DB_DATABASE: noddde
+            DB_PASSWORD: noddde
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_ALLOW_EMPTY_PASSWORD: false
+            MYSQL_RANDOM_ROOT_PASSWORD: null
+volumes:
+    noddde-mysql-storage:
