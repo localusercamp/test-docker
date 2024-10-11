@@ -15,5 +15,9 @@
     },
     "devDependencies": {
         "nitropack": "latest"
+    },
+    "dependencies": {
+        "drizzle-orm": "^0.29.5",
+        "mysql2": "^3.11.3"
     }
 }
