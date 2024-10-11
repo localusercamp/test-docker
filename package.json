@@ -1,10 +1,17 @@
 {
     "private": true,
+    "name": "noddde",
+    "version": "0.0.1",
     "scripts": {
-        "build": "nitro build --dir src/layers/transport",
-        "dev": "nitro dev --dir src/layers/transport",
-        "prepare": "nitro prepare --dir src/layers/transport",
+        "dev": "nitro dev --dir ./src/server",
+        "build": "nitro build --dir ./src/server",
+        "prepare": "nitro prepare --dir ./src/server",
         "preview": "node .output/server/index.mjs"
+    },
+    "imports": {
+        "#app/*": [
+            "./src/app/*"
+        ]
     },
     "devDependencies": {
         "nitropack": "latest"

@@ -1,10 +1,10 @@
 services: 
-    nitrodeno-app:
-        container_name: nitrodeno-app
+    noddde:
+        container_name: noddde
         restart: always
         tty: true
         volumes:
-            - ./../..:/var/www/nitrodeno
+            - ./../..:/var/www/noddde
         ports:
             - 3000:3000
         build:

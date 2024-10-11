@@ -1,4 +1,4 @@
-import { hello } from '../../../app/utils/hello';
+import { hello } from '#app/hello.ts';
 
 export default eventHandler((event) => {
     return hello();

@@ -10,7 +10,7 @@ dev-fresh-up:
 	$(devcompose) up -d
 
 dev-stop:
-	$(devcompose) stop nitrodeno-app
+	$(devcompose) stop noddde
 
 dev-shell:
-	$(devcompose) exec nitrodeno-app ash
+	$(devcompose) exec noddde ash
