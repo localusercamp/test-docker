@@ -1,8 +1,7 @@
 {
     "compilerOptions": {
-        "allowImportingTsExtensions": true,
-        "strict": true,
         "forceConsistentCasingInFileNames": true,
+        "strict": false,
         "noEmit": true,
         "target": "ESNext",
         "module": "ESNext",
@@ -14,12 +13,25 @@
         "jsxFactory": "h",
         "jsxFragmentFactory": "Fragment",
         "paths": {
-            "~/*": [
-                "./src/*"
+            "#imports": [
+                "./nitro-imports"
             ],
-        },
+            "~/*": [
+                "../../*"
+            ],
+            "@/*": [
+                "../../*"
+            ],
+            "~~/*": [
+                "../../*"
+            ],
+            "@@/*": [
+                "../../*"
+            ]
+        }
     },
     "include": [
-        "./**/*"
+        "./nitro.d.ts",
+        "../../**/*"
     ]
 }
