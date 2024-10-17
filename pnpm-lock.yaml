@@ -17,6 +17,9 @@ importers:
       mysql2:
         specifier: ^3.11.3
         version: 3.11.3
+      zod:
+        specifier: ^3.23.8
+        version: 3.23.8
     devDependencies:
       typescript:
         specifier: ^5.6.3
@@ -213,6 +216,9 @@ packages:
   unenv@1.10.0:
     resolution: {integrity: sha512-wY5bskBQFL9n3Eca5XnhH6KbUo/tfvkwm9OpcdCvLaeA7piBNbavbOKJySEwQ1V0RH6HvNlSAFRTpvTqgKRQXQ==}
 
+  zod@3.23.8:
+    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
+
 snapshots:
 
   aws-ssl-profiles@1.1.2: {}
@@ -311,3 +317,5 @@ snapshots:
       mime: 3.0.0
       node-fetch-native: 1.6.4
       pathe: 1.1.2
+
+  zod@3.23.8: {}

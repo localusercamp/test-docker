@@ -1,6 +1,6 @@
 import { createApp, createRouter } from "h3";
 
-import registerRoutes from './server/routes/index';
+import registerRoutes from '#server/routes/calculator'
 
 export const app = createApp();
 

@@ -13,6 +13,23 @@
         "allowSyntheticDefaultImports": true,
         "jsxFactory": "h",
         "jsxFragmentFactory": "Fragment",
+        "paths": {
+            "#root/*": [
+                "./*"
+            ],
+            "#src/*": [
+                "./src/*"
+            ],
+            "#modules/*": [
+                "./src/modules/*"
+            ],
+            "#db/*": [
+                "./src/database/*"
+            ],
+            "#server/*": [
+                "./src/server/*"
+            ],
+        },
     },
     "include": [
         "./**/*"
