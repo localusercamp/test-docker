@@ -1,5 +1,9 @@
-import { hello } from '#app/hello.ts';
+import { defineEventHandler, type Router } from "h3";
 
-export default eventHandler((event) => {
-    return hello();
-});
+import { hello } from '../../app/hello';
+
+export default (router: Router) => {
+    router.get('/', defineEventHandler(e => {
+        return hello();
+    }));
+};
