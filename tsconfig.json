@@ -29,6 +29,9 @@
             "#server/*": [
                 "./src/server/*"
             ],
+            "#framework/*": [
+                "./src/framework/*"
+            ],
         },
     },
     "include": [
